@@ -13,7 +13,7 @@ export const DetailPage = () => {
 
     const getLink = useCallback(async () => {
         try{
-           const fetched = await request(`/api/link/${linkId}`, "GET", null, {
+           const fetched = await request(`https://my-links94.herokuapp.com/api/link/${linkId}`, "GET", null, {
                Authorization: `Bearer ${token}`
            })
             setLink(fetched)
